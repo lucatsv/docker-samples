@@ -4,7 +4,7 @@ container -> an instance of an image
 
 docker images                           -- lists all images 
 
-docker build -t hello-docker:1.0.0      -- creates an image from the dockerfile
+docker build -t hello-docker:1.0.0 .    -- creates an image from the dockerfile
 docker run --name first-container -p 8080:80 hello-docker:1.0.0
 
 docker ps -a                            -- lists all containers
@@ -14,3 +14,11 @@ docker start {container_id}
 docker rm {container_id}
 
 docker rmi {imagename:tag}              -- deletes image
+
+--------
+Step 1:
+docker build -t hello-docker:1.0.0 .
+Step 2:
+docker run --name first-container -p 80:80 hello-docker:1.0.0
+Step 3:
+visit http://localhost
