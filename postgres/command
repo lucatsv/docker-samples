@@ -1,6 +1,1 @@
-docker run --name database-0 -p 5430:5432 -d \
-    -e POSTGRES_PASSWORD=postgres \
-    -e POSTGRES_USER=postgres \
-    -e POSTGRES_DB=stripe-example \
-    -v pgdata:/var/lib/postgresql/data \
-    postgres
+docker exec -it {container_id} psql -U {db_username} --dbname {db_name}
